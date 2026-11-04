@@ -3,302 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FOMAT Insider | October Edition 2026</title>
+<title>FOMAT Insider | November 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; }
-  body { margin: 0; background: #E9E9E9; font-family: 'DM Sans', Arial, Helvetica, sans-serif; color: #333333; font-size: 16px; line-height: 24px; }
-  .wrap { max-width: 640px; margin: 24px auto; background: #FFFFFF; }
-  .inner { padding: 0 32px; }
+  body { margin: 0; background: #FFFFFF; font-family: 'Inter', Arial, Helvetica, sans-serif; color: #2B2B2B; font-size: 16px; line-height: 26px; }
+  h1, h2, h3, .display { font-family: 'Space Grotesk', Arial, sans-serif; color: #1A1A1A; margin: 0; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .sec { padding: 40px 36px; }
+  .kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #FF6600; margin: 0 0 8px 0; }
+  .sec-title { font-size: 28px; line-height: 34px; font-weight: 700; margin: 0 0 12px 0; }
   p { margin: 0 0 14px 0; }
-  h1, h2, h3 { margin: 0; font-family: 'DM Sans', Arial, sans-serif; color: #1A1A1A; }
-  .h-orange { color: #F26B1D; font-size: 24px; line-height: 30px; font-weight: 700; margin: 0 0 12px 0; }
-  .h-maroon { color: #7A1E3A; font-size: 22px; line-height: 28px; font-weight: 700; margin: 24px 0 12px 0; }
-  .h-sub { color: #1A1A1A; font-size: 18px; line-height: 24px; font-weight: 700; margin: 16px 0 8px 0; }
-  .divider { border: 0; border-top: 1px dotted #BDBDBD; margin: 28px 32px 0 32px; }
-  .placeholder { background: linear-gradient(135deg, #2B1B4A 0%, #0E6B78 55%, #F26B1D 120%); border-radius: 16px; height: 200px; margin: 16px 0; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
-  .placeholder.short { height: 160px; }
-  .panel-pink { background: #FDE8E8; padding: 24px; margin-top: 24px; }
-  .panel-yellow { background: #FFF8D6; padding: 24px; margin-top: 24px; }
-  .panel-blue { background: #E6F3FB; padding: 24px; margin-top: 24px; }
-  .label { font-size: 12px; line-height: 16px; font-weight: 700; color: #7A1E3A; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 6px 0; }
-  .small { font-size: 14px; line-height: 20px; color: #555555; }
+  .muted { color: #6B6B6B; font-size: 14px; line-height: 22px; }
 
-  /* Stage chevrons + cards */
-  .stage-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 8px; }
-  .stage-head { color: #FFFFFF; font-weight: 700; font-size: 15px; line-height: 20px; padding: 10px 14px 10px 10px; clip-path: polygon(0 0, 86% 0, 100% 50%, 86% 100%, 0 100%); }
-  .stage-head.psv { background: #1F8ACB; }
-  .stage-head.awarded { background: #F5C500; color: #1A1A1A; }
-  .stage-head.siv { background: #F57F20; }
-  .stage-head.green { background: #5DBB47; }
-  .sc { border-left: 4px solid; padding: 8px 10px; margin-bottom: 8px; font-size: 13px; line-height: 18px; color: #333333; }
-  .sc .id { font-size: 15px; font-weight: 700; line-height: 20px; margin-bottom: 2px; }
-  .sc.psv { border-color: #1F8ACB; background: #E6F3FB; } .sc.psv .id { color: #1B6FA8; }
-  .sc.awarded { border-color: #F5C500; background: #FFF8D6; } .sc.awarded .id { color: #8A6A00; }
-  .sc.green { border-color: #5DBB47; background: #E8F7E4; } .sc.green .id { color: #2E7D25; }
-  .siv-dash { color: #999999; text-align: center; padding-top: 16px; }
+  /* Hero */
+  .hero { background: #1A1A1A; color: #FFFFFF; padding: 48px 36px 44px 36px; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; right: -60px; top: -60px; width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle, #FF6600 0%, #FFCC00 60%, transparent 70%); opacity: 0.9; }
+  .hero-top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 1; }
+  .logo { font-family: 'Space Grotesk', Arial, sans-serif; font-weight: 700; font-size: 22px; letter-spacing: 0.02em; }
+  .logo small { display: block; font-family: 'Inter', Arial, sans-serif; font-weight: 500; font-size: 10px; letter-spacing: 0.3em; color: #BDBDBD; margin-top: 2px; }
+  .issue { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #FFCC00; font-weight: 600; text-align: right; }
+  .hero h1 { color: #FFFFFF; font-size: 56px; line-height: 58px; margin-top: 48px; position: relative; z-index: 1; }
+  .hero h1 span { color: #FF6600; }
+  .hero p { color: #D9D9D9; max-width: 520px; margin-top: 16px; position: relative; z-index: 1; }
 
-  table.data { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 20px; color: #333333; }
-  table.data th { text-align: left; padding: 8px; background: #F26B1D; color: #1A1A1A; font-size: 13px; font-weight: 700; }
-  table.data td { padding: 10px 8px; border-bottom: 1px solid #E6E6E6; vertical-align: top; }
+  /* Stat strip */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid #EDEDED; }
+  .stat { padding: 28px 20px; border-right: 1px solid #EDEDED; text-align: left; }
+  .stat:last-child { border-right: none; }
+  .stat .n { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 44px; line-height: 44px; font-weight: 700; color: #FF6600; }
+  .stat .l { font-size: 13px; line-height: 18px; color: #555; margin-top: 8px; }
 
-  .feature { padding: 12px 0; border-bottom: 1px solid #E6E6E6; }
-  .feature:last-child { border-bottom: none; }
-  .feature strong { color: #1A1A1A; }
+  /* Conferences */
+  .conf { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid #EDEDED; }
+  .conf:last-child { border-bottom: none; }
+  .conf .when { font-family: 'Space Grotesk', Arial, sans-serif; font-weight: 700; color: #1A1A1A; font-size: 18px; line-height: 22px; }
+  .conf .where { font-size: 13px; color: #6B6B6B; margin-top: 4px; }
+  .conf h3 { font-size: 20px; line-height: 26px; margin-bottom: 6px; }
+  .tag { display: inline-block; background: #FFCC00; color: #1A1A1A; font-size: 12px; font-weight: 600; border-radius: 3px; padding: 2px 8px; margin-right: 6px; }
 
-  .cardx { border: 1px solid #E6E6E6; border-left: 4px solid #F26B1D; padding: 16px 20px; margin-bottom: 14px; }
-  .cardx.gold { border-left-color: #F5C500; }
-  .cardx.green { border-left-color: #5DBB47; }
-  .cardx.blue { border-left-color: #1F8ACB; }
-  .avatar { display: inline-block; width: 40px; height: 40px; border-radius: 20px; background: #F26B1D; color: #1A1A1A; font-weight: 700; text-align: center; line-height: 40px; font-size: 14px; margin-right: 12px; vertical-align: middle; }
-  .promo { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid #E6E6E6; }
-  .promo:last-child { border-bottom: none; }
-  .promo-name { font-weight: 700; color: #1A1A1A; }
-  .promo-role { font-size: 14px; line-height: 20px; color: #5F5F5F; }
-  .holiday { display: flex; gap: 16px; align-items: center; padding: 12px 0; border-bottom: 1px solid #E6E6E6; }
-  .holiday:last-child { border-bottom: none; }
-  .date-badge { background: #F5C500; border-radius: 4px; padding: 4px 8px; font-size: 12px; font-weight: 700; white-space: nowrap; color: #1A1A1A; }
+  /* Timeline */
+  .timeline { position: relative; margin-top: 8px; padding-left: 28px; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: #FFCC00; }
+  .tl-item { position: relative; padding: 0 0 22px 0; }
+  .tl-item::before { content: ""; position: absolute; left: -26px; top: 6px; width: 14px; height: 14px; border-radius: 7px; background: #FF6600; border: 3px solid #FFFFFF; box-shadow: 0 0 0 2px #FF6600; }
+  .tl-date { font-family: 'Space Grotesk', Arial, sans-serif; font-weight: 700; color: #1A1A1A; font-size: 16px; }
+  .tl-text { font-size: 15px; color: #444; margin-top: 2px; }
 
-  .footer { padding: 28px 32px; background: #1A1A1A; color: #CCCCCC; font-size: 12px; line-height: 18px; margin-top: 32px; }
+  /* Spotlight & placeholders */
+  .band { background: #FFF8EE; }
+  .ph { border: 2px dashed #FFB27A; border-radius: 12px; padding: 22px; color: #8A5A2B; background: #FFFFFF; }
+  .ph strong { color: #FF6600; font-family: 'Space Grotesk', Arial, sans-serif; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .tile { background: #FFFFFF; border-radius: 12px; padding: 22px; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
+  .tile h3 { font-size: 18px; line-height: 24px; margin-bottom: 8px; }
+  .tile p { font-size: 15px; line-height: 23px; color: #444; margin: 0; }
+
+  /* Tip */
+  .tip { background: #1A1A1A; color: #FFFFFF; border-radius: 12px; padding: 26px; }
+  .tip .kicker { color: #FFCC00; }
+  .tip p { color: #E6E6E6; margin: 0; }
+  .tip strong { color: #FFFFFF; }
+
+  .cta { display: inline-block; background: #FF6600; color: #1A1A1A; font-weight: 700; text-decoration: none; border-radius: 6px; padding: 12px 22px; font-family: 'Space Grotesk', Arial, sans-serif; }
+
+  .footer { background: #1A1A1A; color: #BDBDBD; padding: 32px 36px; font-size: 13px; line-height: 20px; }
   .footer strong { color: #FFFFFF; }
 
-  @media (max-width: 480px) {
-    .inner { padding: 0 20px; }
-    .divider { margin: 24px 20px 0 20px; }
-    .stage-grid { grid-template-columns: repeat(2, 1fr); }
-    table.data { font-size: 13px; }
-    table.data th, table.data td { padding: 8px 4px; }
-    .wrap { margin: 0; }
+  @media (max-width: 560px) {
+    .sec, .hero { padding-left: 20px; padding-right: 20px; }
+    .hero h1 { font-size: 40px; line-height: 44px; }
+    .stats { grid-template-columns: 1fr; }
+    .stat { border-right: none; border-bottom: 1px solid #EDEDED; }
+    .conf { grid-template-columns: 1fr; gap: 6px; }
+    .grid2 { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- LOGO HEADER -->
-  <div class="inner" style="padding-top:28px;">
-    <div style="font-size:30px; line-height:30px; font-weight:700; color:#1A1A1A; letter-spacing:0.02em;">FOMAT</div>
-    <div style="font-size:12px; line-height:16px; letter-spacing:0.3em; color:#1A1A1A; margin-top:2px;">MEDICAL RESEARCH</div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-top">
+      <div class="logo">FOMAT<small>MEDICAL RESEARCH</small></div>
+      <div class="issue">Insider<br>November 2026</div>
+    </div>
+    <h1>Good things<br>are <span>moving.</span></h1>
+    <p>Conferences, new sites, key dates, and what is coming next for the FOMAT network.</p>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><div class="n">11</div><div class="l">study-site assignments in progress (October)</div></div>
+    <div class="stat"><div class="n">40+</div><div class="l">research sites across the network nationwide</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">practices joined the network in October</div></div>
   </div>
 
-  <!-- HERO (replaces the Halloween banner photo) -->
-  <div class="inner">
-    <div class="placeholder" style="margin-top:20px; height:220px;">Halloween banner image</div>
-  </div>
+  <!-- CONFERENCES -->
+  <section class="sec">
+    <p class="kicker">On the road</p>
+    <h2 class="sec-title">Conferences this month</h2>
 
-  <!-- TITLE -->
-  <div class="inner">
-    <h1 style="font-size:44px; line-height:48px; font-weight:700;">FOMAT Insider</h1>
-    <p style="font-size:22px; line-height:28px; font-weight:700; color:#555555; margin-top:8px;">OCTOBER EDITION</p>
-    <p style="margin-top:20px;">Hi Jeremy, here are this month’s updates from across FOMAT, including team achievements, milestones, and upcoming initiatives.</p>
-  </div>
-
-  <!-- ACTIVE STUDIES -->
-  <div class="inner" style="margin-top:24px;">
-    <h2 class="h-orange">11 Study-site assignments in progress, including 3 at Greenlight</h2>
-    <h3 class="h-maroon">Active studies by stage</h3>
-
-    <div class="stage-grid">
+    <div class="conf">
       <div>
-        <div class="stage-head psv">PSV</div>
-        <div class="sc psv"><div class="id">ANBO33-101</div>Eosinophilic esophagitis (EoE)<br>Unio Specialty Care<br>Dr. Elias Tarakji<br>Arcadia, CA</div>
-        <div class="sc psv"><div class="id">ANBO33-101</div>Eosinophilic esophagitis (EoE)<br>RMG<br>Dr. Erik Springer<br>Littleton, CO</div>
-        <div class="sc psv"><div class="id">SL-325-201</div>Crohn’s disease<br>HG<br>Dr. Najm Soofi<br>Ypsilanti, MI</div>
-        <div class="sc psv"><div class="id">1486-0006</div>Crohn’s disease<br>CDC<br>Dr. Erica Cohen<br>Chevy Chase, MD</div>
-        <div class="sc psv"><div class="id">ACADIA_283229 D6934C00001</div>Asthma in adolescents<br>Dr. Preeti Chopra<br>Oxnard, CA</div>
-        <div class="sc psv"><div class="id">TLX090</div>Metastatic bone pain<br>Dr. William Pace<br>Oxnard, CA</div>
+        <div class="when">Nov 5–9</div>
+        <div class="where">Denver, CO</div>
       </div>
       <div>
-        <div class="stage-head awarded">Awarded</div>
-        <div class="sc awarded"><div class="id">J4M-MC-PW03</div>Pediatric obesity<br>Dr. Carey Chronis<br>Ventura, CA</div>
-        <div class="sc awarded"><div class="id">VRB-101-202</div>Obesity or overweight<br>Dr. Melinda Jezierski<br>Santa Maria, CA</div>
-      </div>
-      <div>
-        <div class="stage-head siv">SIV</div>
-        <div class="siv-dash">—</div>
-      </div>
-      <div>
-        <div class="stage-head green">Greenlight</div>
-        <div class="sc green"><div class="id">MGL-3196-34</div>MASH<br>Dr. Elias Tarakji<br>Arcadia, CA</div>
-        <div class="sc green"><div class="id">MGL-3196-34</div>MASH<br>Dr. Augusto Focil<br>Oxnard, CA</div>
-        <div class="sc green"><div class="id">J4M-MC-PW02</div>Pediatric obesity<br>Dr. Carey Chronis<br>Ventura, CA</div>
+        <span class="tag">Hepatology</span>
+        <h3>AASLD The Liver Meeting 2026</h3>
+        <p class="muted" style="margin:0;">Steve Schlesinger, Senior Manager, Business Development, will be connecting with industry leaders and the hepatology research community.</p>
       </div>
     </div>
 
-    <p style="margin-top:18px;">Across our research network, 11 study-site assignments are progressing through different stages: six in PSV, two in Awarded, and three at Greenlight. Some protocols are represented across multiple sites or Principal Investigators (PIs), highlighting the continued expansion of our research network.</p>
-  </div>
-
-  <hr class="divider">
-
-  <!-- NETWORK EXPANSION -->
-  <div class="inner">
-    <div class="panel-pink" style="margin-left:-32px; margin-right:-32px; padding-left:32px; padding-right:32px;">
-      <h2 class="h-orange" style="margin-top:0;">Our network expands into North Carolina and endocrinology</h2>
-      <div class="placeholder short" style="background:linear-gradient(135deg,#F3D5D5,#B8D8E8); color:#555;">Creedmoor Centre Endocrinology photo</div>
-      <p style="margin:0;">Creedmoor Centre Endocrinology has joined FOMAT’s network, marking two important milestones: our first location in North Carolina and our entry into endocrinology. Led by Dr. Julia Warren-Ulanch, the practice expands our expertise in diabetes, thyroid disorders, and other endocrine conditions while helping grow our network beyond 40 sites nationwide.</p>
+    <div class="conf">
+      <div>
+        <div class="when">Nov 6–9</div>
+        <div class="where">Chicago, IL</div>
+      </div>
+      <div>
+        <span class="tag">Cardiology</span>
+        <h3>AHA Scientific Sessions</h3>
+        <p class="muted" style="margin:0;">Santiago Focil and Alex Harrison, M.D., will meet cardiology investigators. Know someone attending? Send Santiago their name so we can line up meetings before the sessions begin.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="inner">
-    <h2 class="h-orange" style="margin-top:28px;">Cardiology Associates of Michigan joins FOMAT’s network</h2>
-    <div class="placeholder short" style="background:linear-gradient(135deg,#CFE3F2,#F4F8FB); color:#555;">Cardiology Associates of Michigan photo</div>
-    <p>FOMAT is partnering with Cardiology Associates of Michigan, a cardiology practice in Shelby Township. The group’s principal investigator has extensive research experience, and the practice plans to bring a research program into its private practice with FOMAT’s support.</p>
-    <h3 class="h-sub">What is Cardiology Associates of Michigan?</h3>
-    <p>Cardiology Associates of Michigan is a cardiology practice serving Macomb and St. Clair counties, with locations in Shelby Township, Roseville, and East China. Over the past 25 years it has grown from a solo practice into a multi-clinician group that includes interventional and non-interventional cardiologists and advanced practice providers. Clinical research and patient education are among its core focus areas.</p>
-  </div>
-
-  <hr class="divider">
-
-  <div class="inner">
-    <h2 class="h-orange" style="margin-top:24px;">Metro Detroit Endocrinology Center joins FOMAT’s network</h2>
-    <div class="placeholder short" style="background:linear-gradient(135deg,#E3F1E0,#F4F8FB); color:#555;">Metro Detroit Endocrinology Center photo</div>
-    <p>Building on our recent expansion into endocrinology, FOMAT welcomes Metro Detroit Endocrinology Center to our growing research network. With locations in Dearborn and Southfield, Michigan, the practice provides specialized care for adults and children with endocrine conditions, including diabetes, thyroid disorders, obesity, and adrenal and pituitary disorders. This new alliance further strengthens our capabilities in endocrinology and expands opportunities for future clinical research.</p>
-    <h3 class="h-sub">About Metro Detroit Endocrinology Center</h3>
-    <p>Metro Detroit Endocrinology Center is an endocrinology practice in Dearborn, Michigan. It cares for adults and children with endocrine disorders, including diabetes, thyroid disease, obesity, and adrenal and pituitary conditions. Services include diabetes care, insulin pump management, hormonal testing, and thyroid ultrasound. The team evaluates each patient’s overall health and keeps primary care providers informed throughout treatment.</p>
-  </div>
-
-  <hr class="divider">
-
-  <!-- GLOBAL TRACKER -->
-  <div class="inner">
-    <h2 class="h-orange" style="margin-top:24px;">Global Tracker 3.0: all your clinical trials in one place</h2>
-    <div class="placeholder short" style="background:linear-gradient(135deg,#F4F4F4,#DDE7EE); color:#555;">Global Tracker screenshot</div>
-    <p>Meet the new Global Tracker 3.0, a fresh version designed to help you find, filter, and review every clinical trial faster than ever. Here’s what we’re doing for you:</p>
-    <div class="panel-blue" style="margin-top:12px;">
-      <div class="feature"><strong>Find what you need in seconds.</strong> Search across all fields at once, or combine filters by sponsor, phase, status, IRB, and more. Every filter appears as a chip you can edit or remove with a single click.</div>
-      <div class="feature"><strong>Focus on what matters.</strong> Choose which columns to display, and your selection is saved for next time.</div>
-      <div class="feature"><strong>See status at a glance.</strong> Color-coded pills and status counters keep you informed, from Selected all the way to Submitted.</div>
-      <div class="feature"><strong>Full study details without leaving the table.</strong> Open each study’s team, events, documents, and ICFs in English and Spanish, with data updated in real time.</div>
-      <div class="feature"><strong>New Study StartUp tab.</strong> Review start-up data for every study, with the same search, filters, and sorting as the main table.</div>
-      <div class="feature"><strong>Work at your own pace.</strong> Sort by any column, choose how many rows to display, and jump straight to the page you need.</div>
-      <div class="feature"><strong>Available in English and Spanish</strong>, and open to the whole team.</div>
+  <!-- KEY DATES -->
+  <section class="sec band">
+    <p class="kicker">Calendar</p>
+    <h2 class="sec-title">Key dates ahead</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">Fri, Nov 20</div>
+        <div class="tl-text">Non-working day in Cuenca, by presidential decree.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Thu–Fri, Nov 26–27</div>
+        <div class="tl-text">Thanksgiving holiday. Plan coverage for your site ahead of time.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Sat, Dec 5</div>
+        <div class="tl-text">Tamale Festival, Plaza Park, 500 S C St, Oxnard. 9:00 AM to 5:00 PM.</div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <hr class="divider">
-
-  <!-- EVENTS -->
-  <div class="inner">
-    <h2 class="h-orange" style="margin-top:24px;">Events</h2>
-
-    <div class="cardx">
-      <p class="label">ACG | October 9–14, 2026 | Nashville</p>
-      <h3 class="h-sub" style="margin-top:0;">Our PIs brought ACG conversations home from Nashville</h3>
-      <p style="margin:0 0 10px 0;">Antoine Jakiche, M.D., from Southwest Gastroenterology Associates, and Erica Cohen, M.D., from our Chevy Chase site, spent the ACG 2026 meeting connecting with GI investigators alongside Brandon Johnson.</p>
-      <p style="margin:0;">Brandon noted those conversations kept going after the show, which points to real chances for new studies with our sites.</p>
+  <!-- COMMUNITY -->
+  <section class="sec">
+    <p class="kicker">Around town</p>
+    <h2 class="sec-title">Come talk with us</h2>
+    <p>Stop by and ask the FOMAT Medical Research team about clinical research opportunities in the community.</p>
+    <div class="grid2" style="margin-top:18px;">
+      <div class="tile">
+        <h3>Channel Islands Farmer’s Market</h3>
+        <p>Every Sunday at 10:00 AM<br>3350 S Harbor Blvd, Oxnard, CA 93035</p>
+      </div>
+      <div class="tile">
+        <h3>Tamale Festival</h3>
+        <p>Saturday, December 5, 2026<br>9:00 AM to 5:00 PM<br>Plaza Park, 500 S C St, Oxnard, CA 93030</p>
+      </div>
     </div>
+  </section>
 
-    <div class="cardx">
-      <p class="label">SCRS Global Site Solutions Summit | October 15–18, 2026 | Orlando</p>
-      <h3 class="h-sub" style="margin-top:0;">FOMAT at SCRS 2026: celebrating 20 years of SCRS</h3>
-      <p style="margin:0 0 10px 0;">FOMAT showcased its Time Capsule booth, inviting attendees to reflect on the evolution of clinical research and explore what the future may hold for the industry. We also took part in a conference event alongside HyperCore International.</p>
-      <p style="margin:0;">Our team connected with sponsors, CROs, and industry leaders, engaging in conversations that could lead to new clinical studies, stronger partnerships, and future growth opportunities.</p>
+  <!-- SPOTLIGHT PLACEHOLDERS -->
+  <section class="sec band">
+    <p class="kicker">Spotlight</p>
+    <h2 class="sec-title">What is new this month</h2>
+    <div class="grid2">
+      <div class="ph"><strong>New sites</strong><br>[Add new site or practice joining the network, name and location]</div>
+      <div class="ph"><strong>Team milestone</strong><br>[Add a team achievement, promotion or anniversary]</div>
+      <div class="ph"><strong>Study update</strong><br>[Add a study start, award or site activation]</div>
+      <div class="ph"><strong>Photo of the month</strong><br>[Add a team photo from a conference or event]</div>
     </div>
+  </section>
 
-    <h3 class="h-sub">Heading to these conferences next</h3>
-    <div class="cardx gold">
-      <p class="label">AASLD The Liver Meeting | November 5–9, 2026 | Denver, CO</p>
-      <p style="margin:0;">Steve Schlesinger will connect with industry leaders, explore new opportunities for collaboration, and strengthen relationships within the hepatology and clinical research communities.</p>
+  <!-- TIP -->
+  <section class="sec">
+    <div class="tip">
+      <p class="kicker">Tool tip</p>
+      <p style="font-family:'Space Grotesk',Arial,sans-serif; font-size:22px; line-height:28px; color:#FFFFFF; margin-bottom:10px;">Check your start-up data in one place.</p>
+      <p>The <strong>Study StartUp tab</strong> in Global Tracker 3.0 shows start-up data for every study, with the same search, filters and sorting as the main table. Filter by sponsor or status to see what is still open before your next meeting.</p>
     </div>
-    <div class="cardx gold">
-      <p class="label">AHA Scientific Sessions | November 6–9, 2026 | Chicago</p>
-      <p style="margin:0;">Santiago Focil, Associate Director, Strategic Partnerships, and Alex Harrison, M.D., Principal Investigator, will be on-site to meet cardiology investigators and discuss the research programs we support. If you know someone who will be attending, send Santiago their name so we can line up meetings before the sessions begin.</p>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <!-- COMMUNITY OUTREACH -->
-  <div class="inner">
-    <h2 class="h-orange" style="margin-top:24px;">Upcoming community events</h2>
-    <p>Stop by and talk with the FOMAT Medical Research team about clinical research opportunities in our community.</p>
-    <table class="data" style="margin-top:8px;">
-      <thead><tr><th>Event</th><th>Date and time</th><th>Address</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Channel Islands Farmer’s Market</strong></td><td>Every Sunday, 10:00 AM</td><td>3350 S Harbor Blvd, Oxnard, CA 93035</td></tr>
-        <tr><td><strong>Día de los Muertos</strong> <span class="small">(past)</span></td><td>Sunday, October 25, 2026, 5:00 to 9:00 PM</td><td>Oxnard Performing Arts &amp; Convention Center, 800 Hobson Way, Oxnard, CA 93030</td></tr>
-        <tr><td><strong>Tamale Festival</strong></td><td>Saturday, December 5, 2026, 9:00 AM to 5:00 PM</td><td>Plaza Park, 500 S C St, Oxnard, CA 93030</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <hr class="divider">
-
-  <!-- COSTUME CONTEST -->
-  <div class="inner">
-    <div class="panel-yellow" style="margin-top:24px;">
-      <h2 class="h-orange" style="margin-top:0;">Spooky season just got better: show us your best costume!</h2>
-      <p class="small" style="margin-bottom:12px;"><em>Past event: the contest took place on Friday, October 30.</em></p>
-      <p>The All Company Costume Contest is Friday, October 30. Enter as an individual or a team. Prizes are on the line, and so are bragging rights for the entire year!</p>
-
-      <p class="label" style="margin-top:12px;">Prizes</p>
-      <p style="margin:0 0 4px 0;"><strong>Best Individual:</strong> $25 gift card to Starbucks or your favorite coffee shop</p>
-      <p style="margin:0 0 4px 0;"><strong>Best Team:</strong> Lunch for the whole team</p>
-      <p style="margin:0 0 14px 0;"><strong>Everyone:</strong> Bragging rights for the year</p>
-
-      <p class="label">How to enter</p>
-      <p style="margin:0 0 6px 0;">Email <a href="mailto:HR@fomatmedical.com" style="color:#1A1A1A; font-weight:700;">HR@fomatmedical.com</a> by <strong>11:00 AM PT on Friday, October 30</strong> with:</p>
-      <ul style="margin:0 0 14px 20px; padding:0;">
-        <li>Individual or team entry</li>
-        <li>Your name, or your team name and members</li>
-        <li>One photo (teams: one person submits for the group)</li>
-      </ul>
-
-      <p class="label">How to vote</p>
-      <ul style="margin:0 0 14px 20px; padding:0;">
-        <li>Entries posted in FOMAT Global by 12:00 PM PT</li>
-        <li>React with a 🎃 to one favorite individual and one favorite team (not yourself or your own team)</li>
-        <li>Voting closes 2:30 PM PT. Winners announced by 3:00 PM PT</li>
-      </ul>
-
-      <p class="label">Key rules</p>
-      <ul style="margin:0 0 0 20px; padding:0;">
-        <li>Follow your clinic’s rules: badge visible, PPE worn properly, closed-toe shoes, nothing loose near equipment or specimens</li>
-        <li>Patient-facing? Keep it simple (ears, a hat, or themed scrubs), or change for your photo during a break</li>
-        <li>Nothing offensive, risqué, political, or weapon-related (real or toy)</li>
-        <li>No costumes based on race, ethnicity, religion, culture, or disability, and no altering your skin tone</li>
-        <li>Take photos away from clinical areas. No patients, screens, charts, or sponsor materials in the shot</li>
-      </ul>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <!-- PROMOTIONS -->
-  <div class="inner">
-    <h2 class="h-orange" style="margin-top:24px;">Promotions across our teams</h2>
-    <p>Congratulations to everyone moving into new roles.</p>
-    <div class="promo"><span class="avatar">EC</span><div><div class="promo-name">Elise Cardenas</div><div class="promo-role">Moves up to Regional Manager, Clinical Operations</div></div></div>
-    <div class="promo"><span class="avatar">IS</span><div><div class="promo-name">Iliana San Andres, M.D.</div><div class="promo-role">Becomes Regional Manager, Clinical Operations</div></div></div>
-    <div class="promo"><span class="avatar">SK</span><div><div class="promo-name">Sreeja Konatham</div><div class="promo-role">Now Team Supervisor</div></div></div>
-    <div class="promo"><span class="avatar">EM</span><div><div class="promo-name">Elizabeth Marquez</div><div class="promo-role">Now Team Supervisor</div></div></div>
-    <div class="promo"><span class="avatar">LC</span><div><div class="promo-name">Luis Castillo, M.D.</div><div class="promo-role">Team Supervisor, Centralized Clinical Research Coordinator</div></div></div>
-    <div class="promo"><span class="avatar">MV</span><div><div class="promo-name">Maria Paula Valarezo</div><div class="promo-role">Now Team Supervisor, Quality Control</div></div></div>
-    <div class="promo"><span class="avatar">CM</span><div><div class="promo-name">Chrystel Mendoza</div><div class="promo-role">Moves from Centralized Study Assistant to Medical Lead, Centralized Clinical Research Coordinator</div></div></div>
-    <div class="cardx green" style="margin-top:20px;">
-      <p class="label" style="color:#2E7D25;">The team keeps growing</p>
-      <p style="margin:0;"><strong style="color:#1A1A1A;">Cristina Paredes</strong> joins as Centralized Study Assistant.</p>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <!-- HOLIDAYS -->
-  <div class="inner">
-    <h2 class="h-orange" style="margin-top:24px;">Upcoming holidays</h2>
-    <p class="label" style="margin-top:8px;">November</p>
-    <div class="holiday"><span class="date-badge">Fri, Nov 20</span><div><strong>Non-working day</strong> by presidential decree</div></div>
-    <div class="holiday"><span class="date-badge">Thu, Nov 26</span><div><strong>Thanksgiving Holiday</strong></div></div>
-    <div class="holiday"><span class="date-badge">Fri, Nov 27</span><div><strong>Thanksgiving Holiday</strong></div></div>
-  </div>
+  </section>
 
   <!-- FOOTER -->
-  <div class="footer">
+  <footer class="footer">
     <p style="margin:0 0 8px 0;"><strong>FOMAT Medical Research</strong></p>
     <p style="margin:0 0 8px 0;">300 S A St, Suite 201, Oxnard, CA 93030, United States | (805) 483-1185</p>
     <p style="margin:0;">You are receiving this email because you are part of the FOMAT Medical Research team.</p>
-  </div>
+  </footer>
 
 </div>
 </body>
